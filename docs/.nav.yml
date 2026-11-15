@@ -4,7 +4,7 @@ append_unmatched: true
 nav:
   - index.md
   - Overview: overview
+  - Constitution: constitution
   - Governance: governance
   - Archive: archive
   - Appendices: appendices
-ignore: "constitution"

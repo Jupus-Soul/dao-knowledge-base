@@ -122,4 +122,3 @@ Old links to the repository on GitHub keep redirecting to the new place.
 ## If something looks wrong
 
 - **A change does not appear on the site:** wait two minutes and refresh. Then look at the **Actions** tab on GitHub. A red cross means the last publish failed. Click it to see which page caused the problem, usually a link to a page that was renamed or deleted.
-- **A page that was hidden on the old site:** the *Constitution* section and the *POLIS* and *Roadmap* pages were hidden from the sidebar on GitBook, and are hidden here in the same way. They can still be opened by their address. To show them, an admin removes the `ignore` lines in `docs/.nav.yml` and `docs/overview/.nav.yml`.
