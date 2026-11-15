@@ -42,6 +42,9 @@ theme:
 extra_css:
   - assets/extra.css
 
+extra_javascript:
+  - assets/theme-default.js
+
 hooks:
   - hooks/site_design.py
 
