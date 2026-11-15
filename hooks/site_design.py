@@ -355,5 +355,8 @@ def on_page_markdown(markdown, page, config, files, **kwargs):
     markdown = callouts(markdown)
     markdown = normalize_lists(markdown)
     if page.is_homepage:
+        # The home page has no need for the "table of contents" column.
+        hide = page.meta.get("hide") or []
+        page.meta["hide"] = list(hide) + ["toc"]
         return home(page, files) + markdown
     return page_header(page) + markdown + child_cards(page)
