@@ -1,6 +1,6 @@
 ---
 title: "Welcome"
-description: "Welcome to the Star Atlas DAO Knowledge Base!"
+description: "Welcome to the Star Atlas DAO Codex!"
 ---
 
 ## Repository

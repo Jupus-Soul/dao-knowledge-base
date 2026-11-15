@@ -1,6 +1,6 @@
-# Star Atlas DAO - Knowledge Base
+# Star Atlas DAO Codex
 
-The source of the Star Atlas DAO Knowledge Base website. Every change saved to the `main` branch is published automatically within a minute or two.
+The source of the Star Atlas DAO Codex website. Every change saved to the `main` branch is published automatically within a minute or two.
 
 **Editors and admins: read [GUIDE.md](GUIDE.md).** It explains, in plain language, how to edit pages, how to add or remove editors, how the custom domain works, and how to move this repository to another GitHub account.
 

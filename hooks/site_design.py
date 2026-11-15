@@ -84,7 +84,7 @@ SECTIONS = {
 DEFAULT_SECTION = ("file-document-outline", "")
 
 HERO_KICKER = "Star Atlas DAO"
-HERO_TITLE = "Knowledge Base"
+HERO_TITLE = "Codex"
 HERO_TEXT = "Everything about how the Star Atlas DAO works: its structure, its governance, and how you can help shape the future of Star Atlas."
 HERO_BUTTONS = [  # (label, page file inside docs/)
     ("Start with the DAO", "overview/the-star-atlas-dao/index.md"),

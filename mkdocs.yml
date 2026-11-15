@@ -1,6 +1,6 @@
-# Site settings for the Star Atlas DAO Knowledge Base.
+# Site settings for the Star Atlas DAO Codex.
 # Editors never need to touch this file. See GUIDE.md.
-site_name: Star Atlas DAO - Knowledge Base
+site_name: Star Atlas DAO Codex
 site_description: A repository of all information related to the Star Atlas DAO ecosystem.
 # The public address of the site. When the site is published, GitHub fills
 # this in automatically (SITE_URL); the address below is only the fallback.
