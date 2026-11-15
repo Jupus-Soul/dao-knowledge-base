@@ -116,6 +116,14 @@ ARTWORK = {
     "archive/council-terms/": "central-space-station.jpg",
     "appendices/": "arc-dark.jpg",
 }
+# The two pillars shown in the middle of the top bar: (label, link, short label for phones).
+# A link starting with "http" opens that site; "" marks the pillar as coming soon;
+# "index.md" is this Codex.
+PILLARS = [
+    ("DAO Dashboard", "", "Dashboard"),
+    ("DAO Codex", "index.md", "Codex"),
+]
+
 HERO_ART = "treaty-hero.jpg"
 HERO_LOGO = "assets/logo-codex.png"      # Codex wordmark shown in the home banner
 FOOTER_LOGO = "assets/logo-council.png"  # DAO Council wordmark shown in every page footer
@@ -388,8 +396,22 @@ def art_url_raw(path, page):
     return get_relative_url(path, page.url or ".")
 
 
+def pillars(page):
+    parts = []
+    for label, link, short in PILLARS:
+        inner = f'<span class="kb-pillar__full">{html.escape(label)}</span><span class="kb-pillar__short">{html.escape(short)}</span>'
+        if not link:
+            parts.append(f'<span class="kb-pillar kb-pillar--soon" title="Coming soon">{inner}<em>Soon</em></span>')
+        elif link.startswith("http"):
+            parts.append(f'<a class="kb-pillar" href="{html.escape(link)}">{inner}</a>')
+        else:
+            parts.append(f'<a class="kb-pillar kb-pillar--active" href="{art_url_raw("index.html", page)}" aria-current="true">{inner}</a>')
+    return '<nav class="kb-pillars" aria-label="Star Atlas DAO Council">' + "".join(parts) + "</nav>\n"
+
+
 def on_post_page(output, page, config, **kwargs):
     """Put each section's icon next to its heading in the sidebar, and the Council logo in the footer."""
+    output = output.replace('<div class="md-header__title"', pillars(page) + '<div class="md-header__title"', 1)
     output = output.replace(
         '<div class="md-copyright">',
         f'<a class="kb-footer-logo" href="{art_url_raw("index.html", page)}"><img src="{art_url_raw(FOOTER_LOGO, page)}" alt="Star Atlas DAO Council"></a>\n<div class="md-copyright">',

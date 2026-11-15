@@ -533,3 +533,30 @@
 .kb-footer-logo:hover img { opacity: 1; }
 .kb-hero__logo .headerlink { display: none; }
 .md-typeset .kb-hero__logo img, .kb-footer-logo img { border: 0; border-radius: 0; background: none; box-shadow: none; padding: 0; }
+
+/* ---------- Top bar: Council logo + pillars ---------- */
+
+.md-header__button.md-logo { padding: 0.2rem 0.4rem; }
+.md-header__button.md-logo img { height: 2rem; width: auto; }
+.md-header__title { display: none; }
+.kb-pillars { flex: 1 1 auto; display: flex; justify-content: center; align-items: center; gap: 0.45rem; min-width: 0; }
+.kb-pillar {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  padding: 0.38rem 0.95rem; border-radius: 2rem;
+  font-size: 0.68rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; white-space: nowrap;
+  color: rgba(255, 255, 255, 0.82); border: 1px solid rgba(255, 255, 255, 0.16); background: rgba(255, 255, 255, 0.04);
+  transition: background-color 0.15s, border-color 0.15s, color 0.15s;
+}
+a.kb-pillar:hover { color: #fff; border-color: var(--kb-accent, #30f3f3); background: rgba(48, 243, 243, 0.1); }
+.kb-pillar--active { color: #06131a; background: var(--kb-accent, #30f3f3); border-color: transparent; }
+a.kb-pillar--active:hover { color: #06131a; background: #7ff0f1; }
+.kb-pillar--soon { color: rgba(255, 255, 255, 0.5); cursor: default; }
+.kb-pillar--soon em { font-style: normal; font-size: 0.5rem; letter-spacing: 0.1em; padding: 0.1rem 0.35rem; border-radius: 1rem; background: rgba(255, 255, 255, 0.12); color: rgba(255, 255, 255, 0.75); }
+.kb-pillar__short { display: none; }
+@media screen and (max-width: 59.9em) {
+  .kb-pillar { padding: 0.32rem 0.6rem; font-size: 0.6rem; letter-spacing: 0.08em; }
+  .kb-pillar__full { display: none; }
+  .kb-pillar__short { display: inline; }
+  .kb-pillar--soon em { display: none; }
+}
+.md-nav__title .md-nav__button.md-logo img { height: 2.2rem; width: auto; }
