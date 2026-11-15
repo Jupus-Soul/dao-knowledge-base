@@ -87,8 +87,8 @@ HERO_KICKER = "Star Atlas DAO"
 HERO_TITLE = "Codex"
 HERO_TEXT = "Everything about how the Star Atlas DAO works: its structure, its governance, and how you can help shape the future of Star Atlas."
 HERO_BUTTONS = [  # (label, page file inside docs/)
-    ("Start with the DAO", "overview/the-star-atlas-dao/index.md"),
-    ("Write a proposal", "governance/authors-guide/index.md"),
+    ("Join The DAO", "overview/the-star-atlas-dao/index.md"),
+    ("Write a Proposal", "governance/authors-guide/index.md"),
 ]
 
 # Artwork shown behind the banner at the top of pages. The key is the start
@@ -125,7 +125,7 @@ PILLARS = [
 ]
 
 HERO_ART = "treaty-hero.jpg"
-HERO_LOGO = "assets/logo-codex.png"      # Codex wordmark shown in the home banner
+HERO_LOGO = "assets/logo-dao.png"        # Star Atlas DAO wordmark shown in the home banner
 FOOTER_LOGO = "assets/logo-council.png"  # DAO Council wordmark shown in every page footer
 ART_DIR = "assets/art/"
 
@@ -354,7 +354,7 @@ def home(page, files):
         '<section class="kb-hero" markdown>\n'
         f'<div class="kb-hero__art" aria-hidden="true" style="background-image:url(\'{art_url(HERO_ART, page)}\')"></div>\n'
         '<div class="kb-hero__text" markdown>\n'
-        f'<h1 class="kb-hero__logo"><img src="{art_url_raw(HERO_LOGO, page)}" alt="{html.escape(HERO_KICKER)} {html.escape(HERO_TITLE)}"></h1>\n'
+        f'<h1 class="kb-hero__logo"><img src="{art_url_raw(HERO_LOGO, page)}" alt="{html.escape(HERO_KICKER)}"></h1>\n'
         f'<p class="kb-hero__lead">{html.escape(HERO_TEXT)}</p>\n\n'
         + " ".join(buttons)
         + "\n\n</div>\n</section>\n\n"
