@@ -116,7 +116,7 @@ ARTWORK = {
     "archive/council-terms/": "central-space-station.jpg",
     "appendices/": "arc-dark.jpg",
 }
-HERO_ART = "treaty-full.jpg"
+HERO_ART = "treaty-hero.jpg"
 ART_DIR = "assets/art/"
 
 # A quote that starts with one of these becomes a coloured note box.
