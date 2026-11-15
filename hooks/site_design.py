@@ -105,7 +105,7 @@ ARTWORK = {
     "overview/treasury": "arc-rainbow.jpg",
     "overview/ecosystem-fund": "jungle-city.jpg",
     "overview/roadmap": "armstrong.jpg",
-    "constitution/": "treaty-table.jpg",
+    "constitution/": "council-arena.jpg",
     "governance/": "central-space-station.jpg",
     "governance/polis-voting-power": "polis-atlas.jpg",
     "governance/creating-a-proposal/": "calico-hangar.jpg",
