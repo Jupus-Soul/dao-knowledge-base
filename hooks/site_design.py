@@ -319,7 +319,8 @@ def page_header(page):
         parts.append(f'<p class="kb-head__crumbs">{crumbs}</p>')
     parts.append(f"<h1>{html.escape(str(title))}</h1>")
     if description:
-        parts.append(f'<p class="kb-head__lead">{html.escape(str(description))}</p>')
+        lead = re.sub(r'(https?://[^\s<]+[^\s<.,;:!?)])', r'<a href="\1">\1</a>', html.escape(str(description)))
+        parts.append(f'<p class="kb-head__lead">{lead}</p>')
     parts.append("</div></header>\n\n")
     return "".join(parts)
 
@@ -411,6 +412,12 @@ def pillars(page):
 
 def on_post_page(output, page, config, **kwargs):
     """Put each section's icon next to its heading in the sidebar, and the Council logo in the footer."""
+    # Links to other websites open in a new tab.
+    output = re.sub(
+        r'<a (?![^>]*\btarget=)([^>]*\bhref="https?://[^"]*"[^>]*)>',
+        r'<a \1 target="_blank" rel="noopener">',
+        output,
+    )
     output = output.replace('<div class="md-header__title"', pillars(page) + '<div class="md-header__title"', 1)
     output = output.replace(
         '<div class="md-copyright">',
@@ -437,6 +444,8 @@ def on_post_page(output, page, config, **kwargs):
 
 
 def on_page_markdown(markdown, page, config, files, **kwargs):
+    # Web addresses typed or pasted as plain text become clickable links.
+    markdown = re.sub(r"\b(https?)\\:", r"\1:", markdown)
     markdown = link_cards(markdown, page, files)
     markdown = callouts(markdown)
     markdown = normalize_lists(markdown)
