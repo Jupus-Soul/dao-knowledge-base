@@ -1,5 +1,5 @@
 ---
-title: "🏛️ Term 2 - Current Term -"
+title: "Term 2 - Current Term -"
 ---
 
 ## Star Atlas DAO Council 

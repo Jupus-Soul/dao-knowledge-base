@@ -1,5 +1,5 @@
 ---
-title: "🏛️ Term 1"
+title: "Term 1"
 ---
 
 ## Star Atlas DAO Council - First Term

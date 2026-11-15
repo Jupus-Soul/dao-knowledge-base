@@ -1,5 +1,5 @@
 ---
-title: "🗳️ PIP Mechanics & Voting"
+title: "PIP Mechanics & Voting"
 ---
 
 In the Star Atlas DAO legislative process, there are currently two vote-escrowed voting mechanisms:

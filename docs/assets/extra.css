@@ -439,3 +439,21 @@
 .md-footer__link:hover { border-color: #2fd0d2; background: rgba(47, 208, 210, 0.08); opacity: 1; }
 .md-footer__direction { text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.58rem; }
 .md-footer-meta { background: transparent; }
+
+/* ---------- Section icons in the sidebar ---------- */
+
+.kb-nav-icon {
+  --c: var(--kb-accent);
+  display: inline-grid;
+  place-items: center;
+  width: 1.45rem;
+  height: 1.45rem;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+  border-radius: 0.4rem;
+  color: var(--c);
+  background: color-mix(in srgb, var(--c) 15%, transparent);
+  border: 1px solid color-mix(in srgb, var(--c) 35%, transparent);
+}
+.kb-nav-icon .kb-icon { width: 0.9rem; height: 0.9rem; vertical-align: 0; }
+.md-nav__item--section > .md-nav__link .md-ellipsis { display: flex; align-items: center; }

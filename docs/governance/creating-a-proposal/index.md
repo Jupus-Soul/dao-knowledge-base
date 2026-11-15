@@ -1,5 +1,5 @@
 ---
-title: "✍️ Creating a Proposal"
+title: "Creating a Proposal"
 ---
 
 > ℹ️ The content below is a living document. Its origin is the structure described in [PIP-1](../../archive/foundational-pips/pip-1-star-atlas-dao.md), which the Council has refined and extended.

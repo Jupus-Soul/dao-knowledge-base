@@ -1,5 +1,5 @@
 ---
-title: "🛠️ Foundational PIPs"
+title: "Foundational PIPs"
 ---
 
 There have been three foundational PIPs so far, the first three that POLIS stakers were able to vote on. This number is expected to grow over time, and we preserve those PIPs here for easy reading and reference.

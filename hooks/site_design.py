@@ -329,6 +329,27 @@ def on_nav(nav, **kwargs):
     return nav
 
 
+def on_post_page(output, page, config, **kwargs):
+    """Put each section's icon next to its heading in the sidebar."""
+    for item in _nav.items if _nav else []:
+        if not isinstance(item, Section):
+            continue
+        target = first_page(item)
+        if not target:
+            continue
+        key = target.file.src_uri.split("/")[0]
+        mark = icon(SECTIONS.get(key, DEFAULT_SECTION)[0])
+        pattern = re.compile(
+            r'(<label class="md-nav__link" for="__nav_\d+" id="__nav_\d+_label"[^>]*>\s*<span class="md-ellipsis">)(\s*'
+            + re.escape(html.escape(str(item.title), quote=False))
+            + r"\s*</span>)"
+        )
+        output = pattern.sub(
+            lambda m: f'{m.group(1)}<span class="kb-nav-icon kb-sec-{key}">{mark}</span>{m.group(2)}', output
+        )
+    return output
+
+
 def on_page_markdown(markdown, page, config, files, **kwargs):
     markdown = link_cards(markdown, page, files)
     markdown = callouts(markdown)
