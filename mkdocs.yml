@@ -1,0 +1,73 @@
+# Site settings for the Star Atlas DAO Knowledge Base.
+# Editors never need to touch this file. See GUIDE.md.
+site_name: Star Atlas DAO - Knowledge Base
+site_description: A repository of all information related to the Star Atlas DAO ecosystem.
+# The public address of the site. When the site is published, GitHub fills
+# this in automatically (SITE_URL); the address below is only the fallback.
+site_url: !ENV [SITE_URL, "https://staratlasdaocouncil.com/"]
+copyright: Star Atlas DAO
+
+theme:
+  name: material
+  logo: assets/logo.png
+  favicon: assets/logo.png
+  font:
+    text: Inter
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  features:
+    - navigation.sections
+    - navigation.indexes
+    - navigation.footer
+    - navigation.top
+    - navigation.instant
+    - search.suggest
+    - search.highlight
+    - content.tooltips
+    - toc.follow
+
+extra_css:
+  - assets/extra.css
+
+hooks:
+  - hooks/normalize_markdown.py
+
+plugins:
+  - search
+  - awesome-nav
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - tables
+  - footnotes
+  - sane_lists
+  - pymdownx.escapeall:
+      hardbreak: true
+  - pymdownx.tilde
+  - pymdownx.magiclink
+  - toc:
+      permalink: true
+
+validation:
+  links:
+    # Lets pages use image paths like /assets/images/photo.png (what the
+    # visual editor writes) and still work wherever the site is hosted.
+    absolute_links: relative_to_docs
+    unrecognized_links: warn
+    anchors: warn
+  nav:
+    omitted_files: ignore

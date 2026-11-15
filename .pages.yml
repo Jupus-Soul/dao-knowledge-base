@@ -1,0 +1,56 @@
+# Settings for the visual editor (Pages CMS, https://app.pagescms.org).
+# Editors never need to touch this file. See GUIDE.md.
+
+media:
+  - name: images
+    label: Images
+    input: docs/assets/images
+    output: /assets/images
+    categories: [image]
+  - name: files
+    label: Documents (PDF etc.)
+    input: docs/assets/files
+    output: /assets/files
+    categories: [document]
+
+content:
+  - name: pages
+    label: Pages
+    type: collection
+    path: docs
+    subfolders: true
+    filename: "{primary}.md"
+    exclude:
+      - assets/**
+      - "**/.nav.yml"
+    view:
+      layout: tree
+      node:
+        filename: index.md
+      fields: [title]
+      primary: title
+      search: [title]
+    fields:
+      - name: title
+        label: Page title
+        type: string
+        required: true
+      - name: description
+        label: Short description (optional, shown in search engines)
+        type: text
+      - name: body
+        label: Page content
+        type: rich-text
+        options:
+          media: images
+
+settings:
+  # Keep any extra page settings that are not shown in the editor.
+  content: true
+  commit:
+    identity: user
+    templates:
+      create: "Create {path} (via visual editor)"
+      update: "Update {path} (via visual editor)"
+      delete: "Delete {path} (via visual editor)"
+      rename: "Rename {oldPath} to {newPath} (via visual editor)"

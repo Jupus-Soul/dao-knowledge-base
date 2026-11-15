@@ -1,0 +1,11 @@
+# polis.md and roadmap.md were hidden pages on the old site. Delete the
+# "ignore" block below to show them in the sidebar.
+nav:
+  - "The Star Atlas DAO": the-star-atlas-dao
+  - dao-hierarchy.md
+  - "Our Structure": our-structure
+  - treasury.md
+  - ecosystem-fund.md
+ignore:
+  - polis.md
+  - roadmap.md

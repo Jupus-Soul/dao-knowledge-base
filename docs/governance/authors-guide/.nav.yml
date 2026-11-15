@@ -1,0 +1,6 @@
+nav:
+  - index.md
+  - phase-1-pip-ideation-stage.md
+  - phase-2-pip-draft-stage.md
+  - "Phase 3: PIP Vote Stage": phase-3-pip-vote-stage
+  - pip-template.md

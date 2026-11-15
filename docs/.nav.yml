@@ -1,0 +1,10 @@
+# Order of the sidebar. New pages that are not listed in a folder's
+# .nav.yml are added automatically at the end of that folder.
+append_unmatched: true
+nav:
+  - index.md
+  - Overview: overview
+  - Governance: governance
+  - Archive: archive
+  - Appendices: appendices
+ignore: "constitution"
