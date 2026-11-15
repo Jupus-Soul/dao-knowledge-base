@@ -117,6 +117,8 @@ ARTWORK = {
     "appendices/": "arc-dark.jpg",
 }
 HERO_ART = "treaty-hero.jpg"
+HERO_LOGO = "assets/logo-codex.png"      # Codex wordmark shown in the home banner
+FOOTER_LOGO = "assets/logo-council.png"  # DAO Council wordmark shown in every page footer
 ART_DIR = "assets/art/"
 
 # A quote that starts with one of these becomes a coloured note box.
@@ -339,8 +341,7 @@ def home(page, files):
         '<section class="kb-hero" markdown>\n'
         f'<div class="kb-hero__art" aria-hidden="true" style="background-image:url(\'{art_url(HERO_ART, page)}\')"></div>\n'
         '<div class="kb-hero__text" markdown>\n'
-        f'<p class="kb-hero__kicker">{html.escape(HERO_KICKER)}</p>\n'
-        f"<h1>{html.escape(HERO_TITLE)}</h1>\n"
+        f'<h1 class="kb-hero__logo"><img src="{art_url_raw(HERO_LOGO, page)}" alt="{html.escape(HERO_KICKER)} {html.escape(HERO_TITLE)}"></h1>\n'
         f'<p class="kb-hero__lead">{html.escape(HERO_TEXT)}</p>\n\n'
         + " ".join(buttons)
         + "\n\n</div>\n</section>\n\n"
@@ -379,8 +380,17 @@ def on_nav(nav, **kwargs):
     return nav
 
 
+def art_url_raw(path, page):
+    return get_relative_url(path, page.url or ".")
+
+
 def on_post_page(output, page, config, **kwargs):
-    """Put each section's icon next to its heading in the sidebar."""
+    """Put each section's icon next to its heading in the sidebar, and the Council logo in the footer."""
+    output = output.replace(
+        '<div class="md-copyright">',
+        f'<a class="kb-footer-logo" href="{art_url_raw("index.html", page)}"><img src="{art_url_raw(FOOTER_LOGO, page)}" alt="Star Atlas DAO Council"></a>\n<div class="md-copyright">',
+        1,
+    )
     for item in _nav.items if _nav else []:
         if not isinstance(item, Section):
             continue

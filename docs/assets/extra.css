@@ -483,12 +483,12 @@
 }
 .kb-head--art .kb-head__text { text-shadow: 0 1px 12px rgba(0, 0, 0, 0.6); }
 
-.kb-hero { min-height: 34rem; align-items: flex-start; background: #070b17; }
+.kb-hero { min-height: 21rem; align-items: center; background: #070b17; }
 .kb-hero__art {
   position: absolute;
   inset: 0;
   background-size: cover;
-  background-position: center 92%;
+  background-position: center 88%;
 }
 .kb-hero__art::after {
   content: "";
@@ -501,7 +501,7 @@
 .kb-hero__text { text-shadow: 0 1px 14px rgba(0, 0, 0, 0.8); padding-top: 2.6rem; }
 .kb-hero .kb-btn { text-shadow: none; backdrop-filter: blur(6px); }
 @media screen and (max-width: 59.9em) {
-  .kb-hero { min-height: 33rem; }
+  .kb-hero { min-height: 24rem; align-items: flex-start; }
   .kb-hero__art { background-position: 50% 100%; }
   .kb-hero__art::after { background: linear-gradient(180deg, rgba(7, 11, 23, 0.96) 0%, rgba(7, 11, 23, 0.85) 45%, rgba(7, 11, 23, 0.1) 72%); }
 }
@@ -520,3 +520,16 @@
 }
 .kb-card--section:hover .kb-card__art { transform: scale(1.04); }
 .kb-card__row { position: relative; display: flex; gap: 0.8rem; align-items: flex-start; padding: 1rem 2.2rem 2.3rem 1.1rem; background: var(--kb-surface); }
+
+/* ---------- Logos ---------- */
+
+.md-typeset h1.kb-hero__logo { margin: 0; line-height: 0; }
+.kb-hero__logo img { width: 19rem; max-width: 100%; height: auto; filter: drop-shadow(0 2px 12px rgba(0, 0, 0, 0.7)); }
+.kb-hero__text { padding-top: 2rem; padding-bottom: 2rem; }
+@media screen and (max-width: 59.9em) { .kb-hero__logo img { width: 15rem; } }
+.md-footer-meta__inner { align-items: center; }
+.kb-footer-logo { display: inline-flex; align-items: center; margin: 0.6rem 0.6rem 0.6rem 0.2rem; }
+.kb-footer-logo img { height: 2.6rem; width: auto; opacity: 0.9; }
+.kb-footer-logo:hover img { opacity: 1; }
+.kb-hero__logo .headerlink { display: none; }
+.md-typeset .kb-hero__logo img, .kb-footer-logo img { border: 0; border-radius: 0; background: none; box-shadow: none; padding: 0; }
