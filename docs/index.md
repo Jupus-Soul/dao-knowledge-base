@@ -17,6 +17,6 @@ This website aims to be a repository of all information related to the Star Atla
 
 ➡️ [The Star Atlas DAO](overview/the-star-atlas-dao/index.md)
 
-➡️ [Foundation](overview/our-structure/foundation/index.md)
+➡️ [Foundation](overview/our-structure/foundation/index.md) - The Star Atlas DAO is grounded on Earth through a legal entity, The Star Atlas DAO Foundation. Read more about it here.
 
-➡️ [Council](overview/our-structure/council/index.md)
+➡️ [Council Term 4](archive/council-terms/index.md) - Learn more about the current DAO Council Members as well as those who served in past terms.

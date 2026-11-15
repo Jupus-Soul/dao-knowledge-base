@@ -204,11 +204,15 @@ def cards(items, extra_class=""):
     return f'<div class="kb-cards {extra_class}" markdown>\n' + "\n".join(items) + "\n</div>\n"
 
 
-REF = re.compile(r"^(?:➡️?|👉) *\[(.+?)\]\(([^)\s]+)\)\s*$")
+REF = re.compile(r"^(?:➡️?|👉) *\[(.+?)\]\(([^)\s]+)\)(?:\s*[-–—:]\s*(.+?))?\s*$")
 
 
 def link_cards(markdown, page, files):
-    """Turn lines like '➡️ [Title](page.md)' into cards."""
+    """Turn lines like '➡️ [Title](page.md)' into cards.
+
+    Text after the link ('➡️ [Title](page.md) - Short description') becomes the
+    card's description; without it, the linked page's own description is used.
+    """
     out, group = [], []
 
     def flush():
@@ -221,8 +225,8 @@ def link_cards(markdown, page, files):
         m = REF.match(line)
         if m:
             title, href = m.group(1), m.group(2)
-            description = ""
-            if not re.match(r"^[a-z]+:|^/|^#", href):
+            description = (m.group(3) or "").strip()
+            if not description and not re.match(r"^[a-z]+:|^/|^#", href):
                 target = posixpath.normpath(posixpath.join(posixpath.dirname(page.file.src_uri), href.split("#")[0]))
                 f = files.get_file_from_path(target)
                 if f:
