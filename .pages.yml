@@ -38,6 +38,11 @@ content:
       - name: description
         label: Short description (optional, shown in search engines)
         type: text
+      - name: cover
+        label: Cover image (optional, shown as a banner at the top of the page)
+        type: image
+        options:
+          media: images
       - name: body
         label: Page content
         type: rich-text

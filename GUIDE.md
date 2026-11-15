@@ -26,7 +26,10 @@ Good to know:
 - **Add a page:** open the folder it belongs in and click **Add an entry**. Give it a title and write the content. It appears at the bottom of that section in the sidebar.
 - **Add an image:** use the image button in the toolbar and upload a picture.
 - **A page that has sub-pages** is stored in a folder, and the page itself is the entry called **index** inside that folder.
-- **Notes and warnings** (the tinted boxes) are simply quotes. Use the quote button and start the text with ℹ️ or ⚠️.
+- **Cover image:** every page has an optional **Cover image** field. Upload a picture there and it appears as a banner at the top of the page.
+- **Note boxes:** use the quote button and start the text with an emoji. ℹ️ makes a blue note, 💡 or ✅ a green one, ⚠️ an amber warning and 🚫 a red one. A quote without an emoji stays a normal quote.
+- **Link cards:** a line that contains only ➡️ followed by a link to another page turns into a card. Several such lines in a row become a grid of cards.
+- **Automatic parts:** the banner with the page title, the cards for sub-pages on section pages, and the home page's banner and section cards are made automatically. You never have to edit them.
 - **Undo a mistake:** every save is kept forever in the history. Ask an admin to restore an earlier version (on GitHub: open the file, click **History**).
 - **Change the order of pages in the sidebar** or the name of a section: ask an admin. The order lives in small files called `.nav.yml` inside each folder of `docs/`.
 

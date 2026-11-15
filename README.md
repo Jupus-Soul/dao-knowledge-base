@@ -12,7 +12,8 @@ The source of the Star Atlas DAO Knowledge Base website. Every change saved to t
 | `docs/**/.nav.yml` | The order of pages in the sidebar |
 | `.pages.yml` | Settings for the visual editor, [Pages CMS](https://app.pagescms.org) |
 | `mkdocs.yml` | Site settings (name, colours, features), built with MkDocs Material |
-| `hooks/` | A small build helper so pages written in the visual editor render correctly |
+| `hooks/site_design.py` | Builds the page banners, cards, note boxes and home page automatically. The home page texts and section icons are listed at the top of this file |
+| `docs/assets/extra.css` | Colours and styling |
 | `.github/workflows/publish.yml` | Builds the site and publishes it to GitHub Pages on every save |
 
 Nothing in this repository refers to a specific GitHub owner, so it keeps working after a transfer.
