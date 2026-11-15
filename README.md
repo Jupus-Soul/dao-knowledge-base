@@ -14,6 +14,7 @@ The source of the Star Atlas DAO Codex website. Every change saved to the `main`
 | `mkdocs.yml` | Site settings (name, colours, features), built with MkDocs Material |
 | `hooks/site_design.py` | Builds the page banners, cards, note boxes and home page automatically. The home page texts and section icons are listed at the top of this file |
 | `docs/assets/extra.css` | Colours and styling |
+| `docs/assets/art/` | Star Atlas artwork used for the home banner, section cards and page banners. Which picture goes where is listed under `ARTWORK` at the top of `hooks/site_design.py` |
 | `.github/workflows/publish.yml` | Builds the site and publishes it to GitHub Pages on every save |
 
 Nothing in this repository refers to a specific GitHub owner, so it keeps working after a transfer.

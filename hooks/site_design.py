@@ -91,6 +91,31 @@ HERO_BUTTONS = [  # (label, page file inside docs/)
     ("Write a proposal", "governance/authors-guide/index.md"),
 ]
 
+# Artwork shown behind the banner at the top of pages. The key is the start
+# of a page's location inside docs/ ("" is the fallback for everything); the
+# most specific match wins. The pictures live in docs/assets/art/. A page's
+# own "Cover image" (set in the visual editor) always takes priority.
+ARTWORK = {
+    "": "stake-station.jpg",
+    "overview/": "stake-station.jpg",
+    "overview/our-structure/": "central-space-station.jpg",
+    "overview/treasury": "arc-rainbow.jpg",
+    "overview/ecosystem-fund": "arc-rainbow.jpg",
+    "overview/roadmap": "calico-landing.jpg",
+    "constitution/": "treaty-table.jpg",
+    "governance/": "central-space-station.jpg",
+    "governance/polis-voting-power": "treaty-table.jpg",
+    "governance/creating-a-proposal/": "calico-hangar.jpg",
+    "governance/authors-guide/": "calico-landing.jpg",
+    "governance/active-pips/": "calico-surf.jpg",
+    "archive/": "peacebringers-archive.jpg",
+    "archive/dao-history": "treaty-table.jpg",
+    "archive/council-terms/": "central-space-station.jpg",
+    "appendices/": "arc-dark.jpg",
+}
+HERO_ART = "treaty-full.jpg"
+ART_DIR = "assets/art/"
+
 # A quote that starts with one of these becomes a coloured note box.
 CALLOUTS = {
     "ℹ": ("info", "information-outline"),
@@ -140,7 +165,17 @@ def md_link(target_file, page):
     return posixpath.relpath(target_file.src_uri, start or ".")
 
 
-def card(title, description, href, icon_name=None):
+def artwork_for(src_uri):
+    """The artwork file for a page, by the most specific matching location."""
+    best = max((k for k in ARTWORK if src_uri.startswith(k)), key=len, default=None)
+    return ARTWORK[best] if best is not None else None
+
+
+def art_url(name, page):
+    return get_relative_url(ART_DIR + name, page.url)
+
+
+def card(title, description, href, icon_name=None, art=None):
     title = html.escape(str(title))
     inner = f"<strong>{title}</strong>"
     if description:
@@ -149,6 +184,11 @@ def card(title, description, href, icon_name=None):
         inner = f'<span class="kb-card__icon">{icon(icon_name)}</span><span class="kb-card__body">{inner}</span>'
     else:
         inner = f'<span class="kb-card__body">{inner}</span>'
+    if art:
+        inner = (
+            f'<span class="kb-card__art" style="background-image:url(\'{html.escape(art)}\')"></span>'
+            f'<span class="kb-card__row">{inner}</span>'
+        )
     inner = inner.replace("[", "&#91;").replace("]", "&#93;")
     return f"[{inner}]({href}){{ .kb-card }}"
 
@@ -243,12 +283,19 @@ def page_header(page):
         trail.pop()
     description = page.meta.get("description", "")
     cover = page.meta.get("cover")
-    parts = [f'<header class="kb-head kb-sec-{section_key(page) or "home"}">']
+    art = None
     if cover:
-        src = cover if re.match(r"^[a-z]+:", cover) else get_relative_url(cover.lstrip("/"), page.url)
-        parts.append(f'<img class="kb-head__cover" src="{html.escape(src)}" alt="">')
-    mark = icon(SECTIONS.get(section_key(page), DEFAULT_SECTION)[0])
-    parts.append(f'<span class="kb-head__mark" aria-hidden="true">{mark}</span>')
+        art = cover if re.match(r"^[a-z]+:", cover) else get_relative_url(cover.lstrip("/"), page.url)
+    else:
+        name = artwork_for(page.file.src_uri)
+        art = art_url(name, page) if name else None
+    cls = f'kb-head kb-sec-{section_key(page) or "home"}'
+    if art:
+        parts = [f'<header class="{cls} kb-head--art" style="--art:url(\'{html.escape(art)}\')">']
+    else:
+        parts = [f'<header class="{cls}">']
+        mark = icon(SECTIONS.get(section_key(page), DEFAULT_SECTION)[0])
+        parts.append(f'<span class="kb-head__mark" aria-hidden="true">{mark}</span>')
     parts.append('<div class="kb-head__text">')
     if trail:
         crumbs = '<span class="kb-head__sep">›</span>'.join(html.escape(str(t)) for t in trail)
@@ -287,8 +334,7 @@ def home(page, files):
             buttons.append(f"[{label}]({path}){{ {cls} }}")
     hero = (
         '<section class="kb-hero" markdown>\n'
-        '<div class="kb-hero__art" aria-hidden="true"><span class="kb-hero__planet"></span>'
-        '<span class="kb-hero__ring"></span><span class="kb-hero__moon"></span></div>\n'
+        f'<div class="kb-hero__art" aria-hidden="true" style="background-image:url(\'{art_url(HERO_ART, page)}\')"></div>\n'
         '<div class="kb-hero__text" markdown>\n'
         f'<p class="kb-hero__kicker">{html.escape(HERO_KICKER)}</p>\n'
         f"<h1>{html.escape(HERO_TITLE)}</h1>\n"
@@ -307,8 +353,9 @@ def home(page, files):
         icon_name, blurb = SECTIONS.get(key, DEFAULT_SECTION)
         count = sum(1 for _ in _pages(item))
         blurb = blurb or file_meta(target.file).get("description", "")
+        name = artwork_for(key + "/")
         items.append(
-            card(item.title, blurb, target.file.src_uri, icon_name).replace(
+            card(item.title, blurb, target.file.src_uri, icon_name, art_url(name, page) if name else None).replace(
                 "{ .kb-card }", f"{{ .kb-card .kb-card--section .kb-sec-{key} data-count=\"{count} page{'' if count == 1 else 's'}\" }}"
             )
         )
