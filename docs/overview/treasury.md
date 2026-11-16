@@ -3,7 +3,7 @@ title: "Treasury"
 description: "The assets in the DAO's treasury are subject to management via the DAO's governance processes."
 ---
 
-> The DAO’s treasury is managed by the DAO through on-chain governance mechanisms. Any funds that the DAO decides to send off-chain may be deployed by entities such as the Star Atlas Foundation, but only after receiving on-chain approval by the DAO and subject to the direction of the DAO. The DAO’s treasury is funded by proceeds from what amounts to taxation on transactions in the ecosystem, consistent with the parameters set forth in the [Star Atlas Economics Paper](https://staratlas.com/assets/pdfs/economics-paper.pdf).
+> The DAO’s treasury is managed by the DAO through on-chain governance mechanisms. Any funds that the DAO decides to send off-chain may be deployed by entities such as the Star Atlas Foundation, but only after receiving on-chain approval by the DAO and subject to the direction of the DAO. The DAO’s treasury is funded by proceeds from what amounts to taxation on transactions in the ecosystem, consistent with the parameters set forth in the [Star Atlas Economics Paper](https://storage.googleapis.com/sa-cdn-prod/dao/economy/reports/star-atlas-economics-paper.pdf).
 >
 > *—*[*The Star Atlas DAO Releases its Sustainable Governance Framework*](https://medium.com/star-atlas/the-star-atlas-dao-releases-its-sustainable-governance-framework-5a45b4fad790)
 

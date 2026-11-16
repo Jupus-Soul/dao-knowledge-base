@@ -5,12 +5,12 @@ description: "The information on this page has been lifted straight from the Eco
 
 ## The Three Layers of Governance in Star Atlas
 
-Star Atlas is [designed](https://staratlas.com/assets/pdfs/economics-paper.pdf) to evolve into a fully decentralized, player-owned game, where decisions are made collectively. Governance in the game is structured into a hierarchy of DAOs (Decentralized Autonomous Organizations), powered by the POLIS governance token, and sustained by the in-game economy (ATLAS).
+Star Atlas is [designed](https://storage.googleapis.com/sa-cdn-prod/dao/economy/reports/star-atlas-economics-paper.pdf) to evolve into a fully decentralized, player-owned game, where decisions are made collectively. Governance in the game is structured into a hierarchy of DAOs (Decentralized Autonomous Organizations), powered by the POLIS governance token, and sustained by the in-game economy (ATLAS).
 
 > The long-term vision of Star Atlas is an autonomous, player-owned game, fully controlled and funded by decentralized governance. Therefore, from its early stages, the economy is architected to run through a hierarchy of DAOs, fueled by the governance token (POLIS) and cash flows of ATLAS
 >
 > \
-> \- [Economics Paper](https://staratlas.com/assets/pdfs/economics-paper.pdf) - Governance
+> \- [Economics Paper](https://storage.googleapis.com/sa-cdn-prod/dao/economy/reports/star-atlas-economics-paper.pdf) - Governance
 
 ![The Three Layers of Governance in Star Atlas](/assets/images/sa-dao-hierarchy.jpeg)
 

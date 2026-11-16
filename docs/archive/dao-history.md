@@ -18,7 +18,7 @@ Very quickly, the team decided to go much further than that. Their goal was to e
 > With a long-term perspective, **DAO governors will ultimately be able to drive the direction of Metaverse development. Even to the extent that the founding Star Atlas development team could be voted out as the primary vendor for game assets and game design**. Other areas of more immediate focus include: economic revisions, feature releases, asset release schedules, and optionality to incorporate player-created content. The total supply of POLIS is permanently fixed and does not increase.
 >
 > \
-> — [Economics Paper](https://staratlas.com/assets/pdfs/economics-paper.pdf) (August 18th, 2021 ) \[emphasis ours]
+> — [Economics Paper](https://storage.googleapis.com/sa-cdn-prod/dao/economy/reports/star-atlas-economics-paper.pdf) (August 18th, 2021 ) \[emphasis ours]
 
 The Economics Paper goes into much more depth regarding the governance aspect:
 
