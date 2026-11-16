@@ -117,6 +117,13 @@ ARTWORK = {
     "archive/council-terms/": "central-space-station.jpg",
     "appendices/": "arc-dark.jpg",
 }
+# Contact form (docs/contact.md). Messages are delivered by Web3Forms to the
+# inbox that the access key belongs to, so the Council's email address never
+# appears on the site or in this repository. The key itself is safe to publish.
+CONTACT_PAGE = "contact.md"
+CONTACT_KEY = ""  # paste the Web3Forms access key between the quotes
+CONTACT_ENDPOINT = "https://api.web3forms.com/submit"
+
 # The two pillars shown in the middle of the top bar: (label, link, short label for phones).
 # A link starting with "http" opens that site; "" marks the pillar as coming soon;
 # "index.md" is this Codex.
@@ -422,7 +429,8 @@ def on_post_page(output, page, config, **kwargs):
     output = output.replace('<div class="md-header__title"', pillars(page) + '<div class="md-header__title"', 1)
     output = output.replace(
         '<div class="md-copyright">',
-        f'<a class="kb-footer-logo" href="{art_url_raw("index.html", page)}"><img src="{art_url_raw(FOOTER_LOGO, page)}" alt="Star Atlas DAO Council"></a>\n<div class="md-copyright">',
+        f'<a class="kb-footer-logo" href="{art_url_raw("index.html", page)}"><img src="{art_url_raw(FOOTER_LOGO, page)}" alt="Star Atlas DAO Council"></a>\n'
+        f'<a class="kb-footer-contact" href="{art_url_raw("contact/", page)}">Contact the DAO Council</a>\n<div class="md-copyright">',
         1,
     )
     for item in _nav.items if _nav else []:
@@ -444,7 +452,30 @@ def on_post_page(output, page, config, **kwargs):
     return output
 
 
+def contact_form():
+    return f"""
+<form class="kb-contact" action="{CONTACT_ENDPOINT}" method="POST">
+<input type="hidden" name="access_key" value="{html.escape(CONTACT_KEY)}">
+<input type="hidden" name="subject" value="New message from the Star Atlas DAO Codex contact form">
+<input type="hidden" name="from_name" value="Star Atlas DAO Codex">
+<input type="checkbox" name="botcheck" class="kb-contact__trap" tabindex="-1" autocomplete="off" aria-hidden="true">
+<label class="kb-contact__field"><span>Your name <b>*</b></span>
+<input type="text" name="name" required maxlength="100" autocomplete="name"></label>
+<label class="kb-contact__field"><span>Your email <b>*</b></span>
+<input type="email" name="email" required maxlength="200" autocomplete="email"></label>
+<label class="kb-contact__field"><span>Message <b>*</b></span>
+<textarea name="message" required rows="8" maxlength="5000"></textarea></label>
+<div class="kb-contact__actions">
+<button type="submit" class="kb-btn kb-btn--primary">Send message</button>
+<span class="kb-contact__status" role="status" aria-live="polite"></span>
+</div>
+</form>
+"""
+
+
 def on_page_markdown(markdown, page, config, files, **kwargs):
+    if page.file.src_uri == CONTACT_PAGE:
+        markdown = markdown.rstrip() + "\n\n" + contact_form()
     # Web addresses typed or pasted as plain text become clickable links.
     markdown = re.sub(r"\b(https?)\\:", r"\1:", markdown)
     markdown = link_cards(markdown, page, files)

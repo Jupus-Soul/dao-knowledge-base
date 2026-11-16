@@ -44,6 +44,17 @@ extra_css:
 
 extra_javascript:
   - assets/theme-default.js
+  - assets/contact-form.js
+
+extra:
+  # Icons shown at the bottom of every page.
+  social:
+    - icon: fontawesome/brands/x-twitter
+      link: https://x.com/SADAOCouncil
+      name: Star Atlas DAO Council on X
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/@StarAtlasDAOCouncil
+      name: Star Atlas DAO Council on YouTube
 
 hooks:
   - hooks/site_design.py

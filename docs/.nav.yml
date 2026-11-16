@@ -1,6 +1,8 @@
 # Order of the sidebar. New pages that are not listed in a folder's
 # .nav.yml are added automatically at the end of that folder.
 append_unmatched: true
+# The contact page is linked from the footer of every page, not the sidebar.
+ignore: contact.md
 nav:
   - index.md
   - Overview: overview
