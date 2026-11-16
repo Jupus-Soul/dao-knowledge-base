@@ -70,7 +70,7 @@ This has been active since **April 26, 2023**, coinciding with the launch of the
 ##### References
 
 * [Building with Star Atlas Creative IP - Royalties](https://build.staratlas.com/creative-assets/building-with-star-atlas-creative-ip/royalties)
-* Start: [Supporting Community Entrepreneurs: Build With Star Atlas Intellectual Property, First $1M in Revenue is Royalty-Free](https://staratlas.com/newsroom/the-atlassian-newsletter/supporting-community-entrepreneurs-build-with-star-atlas-intellectual-property-first-one-million-in-revenue-is-royalty-free)
+* Start: [Supporting Community Entrepreneurs: Build With Star Atlas Intellectual Property, First $1M in Revenue is Royalty-Free](https://staratlas.com/newsroom/star-atlas-news/supporting-community-entrepreneurs-build-with-star-atlas-intellectual-property-first-one-million-in-revenue-is-royalty-free)
 
 #### 📈 Crafting Fees
 

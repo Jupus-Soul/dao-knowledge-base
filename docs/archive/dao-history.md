@@ -36,7 +36,7 @@ And \[emphasis ours]:
 
 ## TGE (Aug 26, 2021)
 
-On August 26th, 2021, the POLIS token was [sold for the first time](https://staratlas.com/newsroom/star-atlas-news/star-atlas-token-sale-details-revealed).
+On August 26th, 2021, the POLIS token was [sold for the first time](https://experience.staratlas.com/newsroom/star-atlas-news/star-atlas-token-sale-details-revealed).
 
 ## Seeding the Treasury (Dec 17, 2021)
 
