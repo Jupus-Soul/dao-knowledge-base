@@ -129,7 +129,7 @@ PILLARS = [
 ]
 
 HERO_ART = "treaty-hero.jpg"
-HERO_LOGO = "assets/logo-dao.png"        # Star Atlas DAO wordmark shown in the home banner
+HERO_LOGO = "assets/logo-codex.png"      # DAO Codex wordmark shown in the home banner
 FOOTER_LOGO = "assets/logo-council.png"  # DAO Council wordmark shown in every page footer
 ART_DIR = "assets/art/"
 
@@ -358,7 +358,7 @@ def home(page, files):
         '<section class="kb-hero" markdown>\n'
         f'<div class="kb-hero__art" aria-hidden="true" style="background-image:url(\'{art_url(HERO_ART, page)}\')"></div>\n'
         '<div class="kb-hero__text" markdown>\n'
-        f'<h1 class="kb-hero__logo"><img src="{art_url_raw(HERO_LOGO, page)}" alt="{html.escape(HERO_KICKER)}"></h1>\n'
+        f'<h1 class="kb-hero__logo"><img src="{art_url_raw(HERO_LOGO, page)}" alt="{html.escape(HERO_KICKER)} {html.escape(HERO_TITLE)}"></h1>\n'
         f'<p class="kb-hero__lead">{html.escape(HERO_TEXT)}</p>\n\n'
         + (('<p class="kb-hero__buttons" markdown>' + " ".join(buttons) + "</p>") if buttons else "")
         + "\n\n</div>\n</section>\n\n"
