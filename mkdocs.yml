@@ -47,6 +47,7 @@ extra_javascript:
   - assets/contact-form.js
 
 extra:
+  generator: false  # hides the "Made with Material for MkDocs" line in the footer
   # Icons shown at the bottom of every page.
   social:
     - icon: fontawesome/brands/x-twitter
