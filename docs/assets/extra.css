@@ -364,7 +364,7 @@
 }
 .md-typeset .kb-hero h1 { color: #fff; margin: 0; font-size: 2.6rem; line-height: 1.05; font-weight: 800; }
 .md-typeset .kb-hero__lead { margin: 0.9rem 0 1.3rem; font-size: 0.9rem; line-height: 1.6; color: rgba(255, 255, 255, 0.85); }
-.md-typeset .kb-hero p:last-child { margin-bottom: 0; display: flex; flex-wrap: wrap; gap: 0.6rem; }
+.md-typeset .kb-hero p.kb-hero__buttons { margin-bottom: 0; display: flex; flex-wrap: wrap; gap: 0.6rem; }
 .md-typeset a.kb-btn {
   display: inline-block;
   padding: 0.55rem 1.05rem;
@@ -560,3 +560,5 @@ a.kb-pillar--active:hover { color: #06131a; background: #7ff0f1; }
   .kb-pillar--soon em { display: none; }
 }
 .md-nav__title .md-nav__button.md-logo img { height: 2.2rem; width: auto; }
+
+.md-typeset .kb-hero__text > .kb-hero__lead:last-child { margin-bottom: 0; }

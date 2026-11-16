@@ -87,8 +87,9 @@ HERO_KICKER = "Star Atlas DAO"
 HERO_TITLE = "Codex"
 HERO_TEXT = "Everything about how the Star Atlas DAO works: its structure, its governance, and how you can help shape the future of Star Atlas."
 HERO_BUTTONS = [  # (label, page file inside docs/)
-    ("Join The DAO", "overview/the-star-atlas-dao/index.md"),
-    ("Write a Proposal", "governance/authors-guide/index.md"),
+    # Hidden for now. Remove the "# " at the start of a line to show that button again.
+    # ("Join The DAO", "overview/the-star-atlas-dao/index.md"),
+    # ("Write a Proposal", "governance/authors-guide/index.md"),
 ]
 
 # Artwork shown behind the banner at the top of pages. The key is the start
@@ -356,7 +357,7 @@ def home(page, files):
         '<div class="kb-hero__text" markdown>\n'
         f'<h1 class="kb-hero__logo"><img src="{art_url_raw(HERO_LOGO, page)}" alt="{html.escape(HERO_KICKER)}"></h1>\n'
         f'<p class="kb-hero__lead">{html.escape(HERO_TEXT)}</p>\n\n'
-        + " ".join(buttons)
+        + (('<p class="kb-hero__buttons" markdown>' + " ".join(buttons) + "</p>") if buttons else "")
         + "\n\n</div>\n</section>\n\n"
     )
     items = []
