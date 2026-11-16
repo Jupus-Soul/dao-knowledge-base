@@ -121,7 +121,7 @@ ARTWORK = {
 # inbox that the access key belongs to, so the Council's email address never
 # appears on the site or in this repository. The key itself is safe to publish.
 CONTACT_PAGE = "contact.md"
-CONTACT_KEY = ""  # paste the Web3Forms access key between the quotes
+CONTACT_KEY = "e9ec148f-fcd7-4e71-8e2d-20349adaa7ff"  # paste the Web3Forms access key between the quotes
 CONTACT_ENDPOINT = "https://api.web3forms.com/submit"
 
 # The two pillars shown in the middle of the top bar: (label, link, short label for phones).
