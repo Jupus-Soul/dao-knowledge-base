@@ -66,7 +66,7 @@ Beginning with the infrastructure, the legislative process will take place in tw
 
 \[...] our typical PIP journey starts in the #pip-ideas sub-channel. In that place, any member of the DAO can create a thread to discuss any topic that they feel is relevant to the DAO, gathering their fellow community member’s thoughts on a given subject, proposing models about how a PIP on the topic could look, and debating the topic.
 
-If you feel that the topic is mature enough to be elevated, you can start the first actual step of the legislative process by filling out the [**PIP draft submission form**](https://docs.google.com/forms/d/18UX7c_c_FT7-VQZ_A2hw2Hv7kDN5_pbBwNNfRn73wo4/edit).
+If you feel that the topic is mature enough to be elevated, you can start the first actual step of the legislative process by submitting your idea in the 'pip-ideas' channel on the Star Atlas Discord server. Once your idea has received enough support by the community, it can move to the next phase of drafting with the assistance of a Council Member.
 
 PIP-1 establishes the form a PIP should take — as discussed in greater detail below. Also, keep in mind that although you don’t necessarily have to discuss your PIP idea on the ideas sub-channel before submitting a PIP draft, it is always a good idea to gather feedback and make the best draft possible before submitting it for the DAO elevation, as it will surely improve the odds of the PIP passing.
 
