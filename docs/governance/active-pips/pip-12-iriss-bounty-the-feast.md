@@ -23,4 +23,4 @@ description: "This proposal introduces \"Iris’s Bounty: The Feast,\" a program
 
 To apply for reimbursement under the "Iris's Bounty: The Feast" proposal, please fill out the form at this link. A council member will contact you to provide feedback or confirm pre-approval for your event.
 
- [\[Iris' Bounty: The Feast form\]](https://docs.google.com/forms/d/e/1FAIpQLSdpVVXmJisndNTSsi9DtStKvkYKBk6oQPO5lKRQwo_71vm7Kw/viewform?usp=preview)
+ [\[Iris' Bounty: The Feast form\]](https://govern.staratlas.com/proposals/f15380c9-8d3f-4849-8185-c29f4c72e961)
