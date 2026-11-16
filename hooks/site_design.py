@@ -97,26 +97,17 @@ HERO_BUTTONS = [  # (label, page file inside docs/)
 # most specific match wins. The pictures live in docs/assets/art/. A page's
 # own "Cover image" (set in the visual editor) always takes priority.
 ARTWORK = {
+    # One picture per section, the same one shown on that section's home page card.
+    # To give a single page or folder its own picture, add a line such as
+    #   "overview/treasury": "arc-rainbow.jpg",
     "": "stake-station.jpg",
     "overview/": "stake-station.jpg",
-    "overview/the-star-atlas-dao/": "dao-banner.jpg",
-    "overview/dao-hierarchy": "armstrong.jpg",
-    "overview/our-structure/": "central-space-station.jpg",
-    "overview/polis": "polis-atlas.jpg",
-    "overview/treasury": "arc-rainbow.jpg",
-    "overview/ecosystem-fund": "jungle-city.jpg",
-    "overview/roadmap": "armstrong.jpg",
     "constitution/": "council-arena.jpg",
     "governance/": "central-space-station.jpg",
-    "governance/polis-voting-power": "polis-atlas.jpg",
-    "governance/creating-a-proposal/": "calico-hangar.jpg",
-    "governance/authors-guide/": "calico-landing.jpg",
-    "governance/active-pips/": "calico-surf.jpg",
     "archive/": "peacebringers-archive.jpg",
-    "archive/dao-history": "treaty-table.jpg",
-    "archive/council-terms/": "central-space-station.jpg",
     "appendices/": "arc-dark.jpg",
 }
+
 # Contact form (docs/contact.md). Messages are delivered by Web3Forms to the
 # inbox that the access key belongs to, so the Council's email address never
 # appears on the site or in this repository. The key itself is safe to publish.
