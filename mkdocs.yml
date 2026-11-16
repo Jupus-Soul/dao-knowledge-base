@@ -5,7 +5,7 @@ site_description: A repository of all information related to the Star Atlas DAO 
 # The public address of the site. When the site is published, GitHub fills
 # this in automatically (SITE_URL); the address below is only the fallback.
 site_url: !ENV [SITE_URL, "https://staratlasdaocouncil.com/"]
-copyright: Star Atlas DAO
+copyright: Star Atlas DAO Council
 
 theme:
   name: material
