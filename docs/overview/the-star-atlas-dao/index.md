@@ -5,7 +5,7 @@ description: "The Star Atlas DAO gives you the chance to shape the future of Sta
 
 > *The long-term vision of Star Atlas is an autonomous, player-owned game, fully controlled and funded by decentralized governance.*\
 > \
->  *— Star Atlas* [*White Paper*](https://staratlas.com/white-paper.pdf)
+>  *— Star Atlas* [*White Paper*](https://experience.staratlas.com/white-paper.pdf)
 
 ## What is a DAO?
 

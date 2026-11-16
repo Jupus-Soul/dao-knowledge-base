@@ -5,7 +5,7 @@ description: "Over the years, the team has been published a lot of material rega
 
 ## PDFs
 
-* Jan 14, 2021 — [White Paper](https://staratlas.com/white-paper.pdf)
+* Jan 14, 2021 — [White Paper](https://experience.staratlas.com/white-paper.pdf)
 * August 18th, 2021 — [Economic Paper](https://storage.googleapis.com/sa-cdn-prod/dao/economy/reports/star-atlas-economics-paper.pdf) (aka [Metaverse Economics & Governance Paper](https://medium.com/star-atlas/intergalactic-economy-real-world-atlas-polis-utility-governance-f42d1889aea7))
 * Sept 29, 2022 — [A Sustainable Governance Framework](https://staratlas.com/assets/pdfs/sustainable-governance.pdf)
 

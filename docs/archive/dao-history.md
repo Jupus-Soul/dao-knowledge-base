@@ -9,7 +9,7 @@ From the moment of Star Atlas' inception, the founders envisioned having a gover
 
 > \[...] control of POLIS will enable the gaming community to influence decision making of the Star Atlas development team. This will follow a period of centralization of decision making, likely 2-3 years of game development and balance. At the conclusion of the centralized period, holders will be able to influence game economics (i.e. inflation rates), asset release schedules, game direction, and will otherwise provide some degree of ownership in development decision making.
 >
-> — [White Paper](https://staratlas.com/white-paper.pdf) (January 14th, 2021)
+> — [White Paper](https://experience.staratlas.com/white-paper.pdf) (January 14th, 2021)
 
 ## Economics Paper (Aug 18, 2021)
 

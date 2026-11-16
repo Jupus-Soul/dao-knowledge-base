@@ -12,7 +12,7 @@ The second token is POLIS. If ATLAS corresponds to the pulsating life in the vei
 
 ## White Paper
 
-The original [White Paper](https://staratlas.com/white-paper.pdf) describes POLIS as a multifunctional governance token, with applications both in-game and in directing real-world economic policy.
+The original [White Paper](https://experience.staratlas.com/white-paper.pdf) describes POLIS as a multifunctional governance token, with applications both in-game and in directing real-world economic policy.
 
 ### In-Game
 
