@@ -85,7 +85,7 @@ DEFAULT_SECTION = ("file-document-outline", "")
 
 HERO_KICKER = "Star Atlas DAO"
 HERO_TITLE = "Codex"
-HERO_TEXT = "Everything about how the Star Atlas DAO works: its structure, its governance, and how you can help shape the future of Star Atlas."
+HERO_TEXT = "Everything you need to know about the Star Atlas DAO: the structure, the governance, the leaders, the process, and how you can help shape the future of Star Atlas."
 HERO_BUTTONS = [  # (label, page file inside docs/)
     # Hidden for now. Remove the "# " at the start of a line to show that button again.
     # ("Join The DAO", "overview/the-star-atlas-dao/index.md"),
