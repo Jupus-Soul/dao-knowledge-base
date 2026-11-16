@@ -464,11 +464,12 @@
   min-height: 11.5rem;
   display: flex;
   align-items: flex-end;
-  background:
-    linear-gradient(90deg, rgba(7, 11, 23, 0.94) 0%, rgba(7, 11, 23, 0.78) 38%, rgba(7, 11, 23, 0.25) 75%, rgba(7, 11, 23, 0.1) 100%),
-    linear-gradient(0deg, rgba(7, 11, 23, 0.55) 0%, transparent 55%),
-    var(--art) center / cover no-repeat,
-    var(--kb-space-1);
+  /* The picture itself is set on the element by hooks/site_design.py, so its
+     address is always worked out from the page, not from this file. */
+  background-color: var(--kb-space-1);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   border-color: color-mix(in srgb, var(--c) 35%, transparent);
 }
 .kb-head--art::after { display: none; }

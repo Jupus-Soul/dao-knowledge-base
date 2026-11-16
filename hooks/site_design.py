@@ -96,6 +96,11 @@ HERO_BUTTONS = [  # (label, page file inside docs/)
 # of a page's location inside docs/ ("" is the fallback for everything); the
 # most specific match wins. The pictures live in docs/assets/art/. A page's
 # own "Cover image" (set in the visual editor) always takes priority.
+# Dark fade drawn over banner pictures so the page title stays readable.
+HEAD_SHADE = (
+    "linear-gradient(90deg,rgba(7,11,23,.94) 0%,rgba(7,11,23,.78) 38%,rgba(7,11,23,.25) 75%,rgba(7,11,23,.1) 100%),"
+    "linear-gradient(0deg,rgba(7,11,23,.55) 0%,transparent 55%)"
+)
 ARTWORK = {
     # One picture per section, the same one shown on that section's home page card.
     # To give a single page or folder its own picture, add a line such as
@@ -307,7 +312,7 @@ def page_header(page):
         art = art_url(name, page) if name else None
     cls = f'kb-head kb-sec-{section_key(page) or "home"}'
     if art:
-        parts = [f'<header class="{cls} kb-head--art" style="--art:url(\'{html.escape(art)}\')">']
+        parts = [f'<header class="{cls} kb-head--art" style="background-image:{HEAD_SHADE},url(\'{html.escape(art)}\')">']
     else:
         parts = [f'<header class="{cls}">']
         mark = icon(SECTIONS.get(section_key(page), DEFAULT_SECTION)[0])
