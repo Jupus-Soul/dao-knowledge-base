@@ -102,18 +102,20 @@ Everything moves with the repository: pages, images, history and settings. Nothi
 
 ### Before you start
 
-You need to be allowed to create repositories in the DAO's GitHub organization (an owner of the organization can do the transfer with you or grant you that right).
+The DAO's GitHub organization is **Star-Atlas-DAO-Council** (https://github.com/Star-Atlas-DAO-Council). You need to be allowed to create repositories in it (an owner of the organization can do the transfer with you or grant you that right).
 
 ### The transfer
 
 1. On GitHub, open the repository, then **Settings**. Scroll to the bottom, to the **Danger Zone**.
-2. Click **Transfer**, choose the DAO organization as the new owner, and confirm.
+2. Click **Transfer**, choose **Star-Atlas-DAO-Council** as the new owner, and confirm.
+
+Until the custom domain is set up, the site then moves to https://star-atlas-dao-council.github.io/dao-knowledge-base/ (the old jupus-soul.github.io address stops working).
 
 ### Checklist right after the transfer
 
 1. **Publishing:** in the repository, open **Settings**, then **Pages**. Check that **Source** says **GitHub Actions**. If it does not, select it.
 2. **Custom domain:** on the same page, check that **Custom domain** still says `staratlasdaocouncil.com`. If it is empty, type it in again and save, then tick **Enforce HTTPS**.
-3. **Cloudflare:** change the `www` record's target from `jupus-soul.github.io` to `<dao-organization-name>.github.io`. The four **A** records stay as they are.
+3. **Cloudflare:** change the `www` record's target from `jupus-soul.github.io` to `star-atlas-dao-council.github.io`. The four **A** records stay as they are.
 4. **Visual editor:** an owner of the DAO organization goes to https://app.pagescms.org, signs in with GitHub and installs the Pages CMS GitHub App on the organization, for this repository only (the same one-time setup as in part 2).
 5. **Editors:** check the Collaborators list in Pages CMS and invite again anyone who is missing. People added on GitHub (Option B) need to be added again in the organization.
 6. **Test:** make a small edit in the visual editor, save, and check that it appears on the site after a minute or two. If it does not, open the **Actions** tab on GitHub, click **Publish site**, then **Run workflow**.
